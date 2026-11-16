@@ -15,19 +15,19 @@ Open MATLAB or Octave in this folder, then run:
 
 | Command | Produces | Paper |
 |---|---|---|
-| `run_all` | Tables 1–5, Figures 1–7, convergence, material dispersion and tolerance checks; log in `results/summary.txt` | Methods, Results 1–2 |
-| `added_analyses` | DC self-coupling, band depth, FWHM and FOM versus SRI | Results 1.8, Table 6 |
-| `upper_branch_nu15` | Second (upper-branch) band of ν = 15 versus SRI | Results 1.4 |
-| `fom_map` | 2,100-design FOM map (`results/fom_map.csv`) and Table 7 (`results/table7_design.csv`) | Methods 2.4, Results 2.3 |
+| `run_all` | Tables 1–4, Figures 1–3, convergence, material dispersion and tolerance checks; log in `results/summary.txt`. Also writes supplementary figures not shown in the paper (mode profiles, coupling coefficients, shift versus SRI) | Methods, Results 1–2 |
+| `added_analyses` | DC self-coupling, band depth, FWHM and FOM versus SRI | Results 1.6, Table 5 |
+| `upper_branch_nu15` | Second (upper-branch) band of ν = 15 versus SRI | Results 1.2 |
+| `fom_map` | 2,100-design FOM map (`results/fom_map.csv`) and Table 6 (`results/table7_design.csv`) | Methods 2.4, Results 2.3 |
 | `bench_libish` | Comparison with the measured LPGs of Libish et al. (`results/bench_libish.csv`) | Table 3 |
 
 Optional Python checks (run in this folder):
 
 | Command | Produces | Paper |
 |---|---|---|
-| `python verify_independent.py` | Nine numerical verification checks | Table 4 |
-| `python vector_check.py` | Comparison with the exact three-layer vector model (HE/EH, l = 1) | Table 3, Tables 5–6 |
-| `python make_fig8.py` | `results/fig8_fom_map.png` from `results/fom_map.csv` | Figure 8 |
+| `python verify_independent.py` | Nine numerical verification checks | Results 1.4 |
+| `python vector_check.py` | Comparison with the exact three-layer vector model (HE/EH, l = 1) | Tables 3–4 |
+| `python make_fig8.py` | `results/fig8_fom_map.png` from `results/fom_map.csv` | Figure 4 |
 
 All parameters are set in `lpg_params.m` (Table 1 of the paper).
 
@@ -49,7 +49,7 @@ All parameters are set in `lpg_params.m` (Table 1 of the paper).
 | `dispersion_check.m`, `convergence_check.m`, `tolerance_analysis.m` | Material dispersion, grid convergence and tolerance checks |
 
 ## Output
-- `results/` holds the CSV and text outputs used in the paper, plus `fig8_fom_map.png`. Figures 1–7 are written to the same folder when `run_all` is run.
+- `results/` holds the CSV and text outputs used in the paper, plus `fig8_fom_map.png` (Figure 4 of the paper). The other figures are written to the same folder when `run_all` is run.
 - `reference_octave/` holds the same outputs from GNU Octave 8.4, for comparison with MATLAB.
 
 ## Model assumptions

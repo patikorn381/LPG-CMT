@@ -1,4 +1,4 @@
-"""Figure 8 of the paper, drawn from results/fom_map.csv (written by fom_map.m).
+"""Figure 4 of the paper, drawn from results/fom_map.csv (written by fom_map.m).
 Run from this folder:  python make_fig8.py   (needs numpy, pandas, matplotlib)"""
 import pandas as pd, numpy as np, matplotlib
 matplotlib.use('Agg')

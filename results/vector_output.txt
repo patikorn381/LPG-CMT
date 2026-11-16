@@ -1,0 +1,75 @@
+== 0. self-tests of the vector solver ==
+HE11 core mode: 8x8 system vs textbook equation             4.441e-16      (criterion < 1e-09)  PASS
+silica rod in air, 16 modes: 8x8 vs textbook equation       3.387e-11      (criterion < 1e-09)  PASS
+
+== 1. effective indices at 1.00 um, n3 = 1.00 ==
+bracketed vector roots equal the scanned odd-nu roots       2.220e-16      (criterion < 1e-12)  PASS
+MATLAB scalar neff vs this script's scalar neff (nu 1-15)   4.975e-10      (criterion < 1e-08)  PASS
+   core mode: scalar LP01 1.45455902   vector HE11 1.45455361   difference -5.41e-06
+   nu | scalar (MATLAB) | vector HE (odd nu) | difference | vector EH (nu+1)
+    1 | 1.45327869 | 1.45327866 | -3.67e-08 | 1.45324137
+    3 | 1.45320692 | 1.45320677 | -1.53e-07 | 1.45314249
+    5 | 1.45308589 | 1.45308555 | -3.39e-07 | 1.45299982
+    7 | 1.45291656 | 1.45291597 | -5.91e-07 | 1.45281329
+    9 | 1.45269969 | 1.45269879 | -9.02e-07 | 1.45258288
+   11 | 1.45243593 | 1.45243466 | -1.27e-06 | 1.45230859
+   13 | 1.45212578 | 1.45212409 | -1.69e-06 | 1.45199043
+   15 | 1.45176961 | 1.45176744 | -2.16e-06 | 1.45162843
+max |neff(vector) - neff(scalar)|, cladding nu 1-15         2.162e-06 
+|neff(vector) - neff(scalar)|, core mode                    5.408e-06 
+
+== 2. resonant wavelengths at Lambda = 400 um, n3 = 1.00 ==
+   nu | scalar MATLAB (nm) | scalar Python (nm) | vector (nm) | vector - scalar (nm) | (%)
+    1 |    800.16 |    800.16 |    799.40 |  -0.75 | -0.094
+    3 |    807.06 |    807.06 |    806.29 |  -0.77 | -0.095
+    5 |    819.46 |    819.46 |    818.66 |  -0.79 | -0.097
+    7 |    838.58 |    838.58 |    837.75 |  -0.83 | -0.099
+    9 |    866.85 |    866.85 |    865.95 |  -0.90 | -0.103
+   11 |    909.34 |    909.34 |    908.35 |  -0.99 | -0.109
+   13 |    979.64 |    979.64 |    978.50 |  -1.14 | -0.117
+   15 |   1162.92 |   1162.92 |   1161.54 |  -1.38 | -0.119
+scalar resonances: MATLAB vs Python                         1.135e-06 nm   (criterion < 0.1)  PASS
+max |lambda_r(vector) - lambda_r(scalar)|                        1.38 nm
+max relative difference of lambda_r                            0.1187 %
+
+== 3. response to the surrounding index ==
+   SRI  | shift scalar (nm): nu 9, 11, 13, 15      | shift vector (nm)
+   1.00 |     0.00     0.00     0.00     0.00 |     0.00     0.00     0.00     0.00
+   1.05 |    -0.02    -0.04    -0.08    -0.55 |    -0.02    -0.04    -0.10    -0.69
+   1.10 |    -0.04    -0.08    -0.18    -1.23 |    -0.05    -0.10    -0.22    -1.51
+   1.15 |    -0.07    -0.13    -0.31    -2.07 |    -0.08    -0.16    -0.37    -2.51
+   1.20 |    -0.11    -0.21    -0.47    -3.15 |    -0.13    -0.25    -0.56    -3.77
+   1.25 |    -0.16    -0.30    -0.69    -4.61 |    -0.18    -0.36    -0.82    -5.42
+   1.30 |    -0.23    -0.45    -1.02    -6.70 |    -0.27    -0.52    -1.18    -7.72
+   1.35 |    -0.35    -0.69    -1.56   -10.10 |    -0.40    -0.78    -1.77   -11.34
+   1.40 |    -0.63    -1.22    -2.76   -17.15 |    -0.69    -1.33    -3.02   -18.61
+   1.41 |    -0.73    -1.43    -3.23   -19.76 |    -0.79    -1.55    -3.49   -21.25
+   1.42 |    -0.88    -1.72    -3.89   -23.35 |    -0.95    -1.85    -4.16   -24.87
+   1.43 |    -1.12    -2.19    -4.93   -28.81 |    -1.19    -2.32    -5.22   -30.32
+   1.44 |    -1.60    -3.10    -6.98   -38.85 |    -1.67    -3.24    -7.28   -40.29
+   sensitivity (nm/RIU), scalar | vector | vector/scalar
+   1.025 |     -0.37     -0.72     -1.63    -11.10 |     -0.46     -0.89     -2.03    -13.81 |  1.25  1.25  1.25  1.24
+   1.075 |     -0.45     -0.88     -2.00    -13.50 |     -0.55     -1.07     -2.44    -16.45 |  1.22  1.22  1.22  1.22
+   1.125 |     -0.57     -1.10     -2.51    -16.82 |     -0.68     -1.32     -3.00    -20.02 |  1.20  1.20  1.19  1.19
+   1.175 |     -0.74     -1.43     -3.26    -21.63 |     -0.86     -1.68     -3.81    -25.12 |  1.17  1.17  1.17  1.16
+   1.225 |     -1.01     -1.96     -4.45    -29.09 |     -1.15     -2.23     -5.07    -32.91 |  1.14  1.14  1.14  1.13
+   1.275 |     -1.48     -2.88     -6.54    -41.92 |     -1.64     -3.20     -7.25    -46.08 |  1.11  1.11  1.11  1.10
+   1.325 |     -2.48     -4.82    -10.91    -67.91 |     -2.67     -5.20    -11.75    -72.39 |  1.08  1.08  1.08  1.07
+   1.375 |     -5.46    -10.62    -23.95   -141.10 |     -5.71    -11.09    -24.99   -145.46 |  1.05  1.04  1.04  1.03
+   1.405 |    -10.62    -20.65    -46.45   -260.79 |    -10.92    -21.22    -47.66   -264.12 |  1.03  1.03  1.03  1.01
+   1.415 |    -15.10    -29.34    -65.88   -359.15 |    -15.42    -29.95    -67.15   -361.28 |  1.02  1.02  1.02  1.01
+   1.425 |    -23.97    -46.54   -104.26   -545.39 |    -24.31    -47.18   -105.54   -544.96 |  1.01  1.01  1.01  1.00
+   1.435 |    -47.29    -91.83   -205.01  -1004.51 |    -47.64    -92.44   -206.06   -997.36 |  1.01  1.01  1.01  0.99
+sensitivity ratio vector/scalar, first SRI interval (max)       1.248 
+sensitivity ratio vector/scalar, last SRI interval (max dev. from 1)   0.007397 
+shift at the last SRI value: max relative difference            4.506 %
+vector model: |S| >= 10 nm/RIU from SRI (nu = 9)                1.401 
+vector model: |S| >= 10 nm/RIU from SRI (nu = 11)               1.368 
+vector model: |S| >= 10 nm/RIU from SRI (nu = 13)               1.308 
+vector model: |S| >= 10 nm/RIU from SRI (nu = 15)                   1 
+
+== 4. turning point of nu = 15 ==
+turning point of nu = 15, scalar: period                          409 um (at 1289 nm)
+turning point of nu = 15, vector: period                        408.9 um (at 1286 nm)
+
+Vector check done in 12 s -> matlab_results/table_vector_modes.csv, table_vector_sri.csv, table_vector_sensitivity.csv, vector_summary.csv

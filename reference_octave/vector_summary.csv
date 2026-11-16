@@ -1,0 +1,19 @@
+item,value,criterion,result
+HE11 core mode: 8x8 system vs textbook equation,4.440892098500626e-16,1e-09,PASS
+"silica rod in air, 16 modes: 8x8 vs textbook equation",3.387401470433815e-11,1e-09,PASS
+bracketed vector roots equal the scanned odd-nu roots,2.220446049250313e-16,1e-12,PASS
+MATLAB scalar neff vs this script's scalar neff (nu 1-15),4.975440059951097e-10,1e-08,PASS
+"max |neff(vector) - neff(scalar)|, cladding nu 1-15",2.1622338928217744e-06,,info
+"|neff(vector) - neff(scalar)|, core mode",5.408057176303771e-06,,info
+scalar resonances: MATLAB vs Python,1.1353965874150163e-06,0.1,PASS
+max |lambda_r(vector) - lambda_r(scalar)|,1.3801839029040366,,info
+max relative difference of lambda_r,0.11868233830653185,,info
+"sensitivity ratio vector/scalar, first SRI interval (max)",1.248193990235802,,info
+"sensitivity ratio vector/scalar, last SRI interval (max dev. from 1)",0.00739719466987232,,info
+shift at the last SRI value: max relative difference,4.5064452251383225,,info
+vector model: |S| >= 10 nm/RIU from SRI (nu = 9),1.400920684436971,,info
+vector model: |S| >= 10 nm/RIU from SRI (nu = 11),1.3681522845849987,,info
+vector model: |S| >= 10 nm/RIU from SRI (nu = 13),1.308283489393754,,info
+vector model: |S| >= 10 nm/RIU from SRI (nu = 15),1.0,,info
+"turning point of nu = 15, scalar: period",408.9816262794785,,info
+"turning point of nu = 15, vector: period",408.91938168090434,,info

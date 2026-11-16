@@ -1,0 +1,77 @@
+neff LP01 vs ratio form                  1.173e-10        (criterion < 1e-09)  PASS
+neff LP01 vs Rudolph-Neumann             2.235e-06        (criterion < 1e-05)  PASS
+neff cladding nu=1-39                    4.975e-10        (criterion < 1e-06)  PASS
+kappa/dn nu=1-15                         4.661e-04 %      (criterion < 1)  PASS
+orthogonality nu=1-15                    7.618e-15        (criterion < 0.0001)  PASS
+   nu= 1: kappa*L MATLAB 0.30347  Python 0.30347   Tmin MATLAB    -0.41 dB  Python    -0.41 dB
+   nu= 3: kappa*L MATLAB 0.56102  Python 0.56103   Tmin MATLAB    -1.45 dB  Python    -1.45 dB
+   nu= 5: kappa*L MATLAB 0.80354  Python 0.80355   Tmin MATLAB    -3.17 dB  Python    -3.17 dB
+   nu= 7: kappa*L MATLAB 1.03517  Python 1.03518   Tmin MATLAB    -5.84 dB  Python    -5.84 dB
+   nu= 9: kappa*L MATLAB 1.25345  Python 1.25345   Tmin MATLAB   -10.12 dB  Python   -10.12 dB
+   nu=11: kappa*L MATLAB 1.45024  Python 1.45024   Tmin MATLAB   -18.40 dB  Python   -18.40 dB
+   nu=13: kappa*L MATLAB 1.60268  Python 1.60268   Tmin MATLAB   -29.93 dB  Python   -29.93 dB
+   nu=15: kappa*L MATLAB 1.56819  Python 1.56818   Tmin MATLAB   -51.68 dB  Python   -51.64 dB
+kappa*L at resonance nu=1-15             1.413e-05 rad    (criterion < 0.001)  PASS
+band depth nu=1-13                       3.540e-03 dB     (criterion < 0.05)  PASS
+   (info) nu=15 depth difference 0.04 dB: a band deeper than 40 dB depends on kappa*L to 1e-4 rad
+   nu= 1: MATLAB   800.156 nm   Python   800.156 nm
+   nu= 3: MATLAB   807.057 nm   Python   807.057 nm
+   nu= 5: MATLAB   819.458 nm   Python   819.458 nm
+   nu= 7: MATLAB   838.584 nm   Python   838.584 nm
+   nu= 9: MATLAB   866.848 nm   Python   866.848 nm
+   nu=11: MATLAB   909.338 nm   Python   909.338 nm
+   nu=13: MATLAB   979.642 nm   Python   979.642 nm
+   nu=15: MATLAB  1162.923 nm   Python  1162.923 nm
+resonant wavelength nu=1-15              1.136e-06 nm     (criterion < 0.1)  PASS
+   SRI interval   nu   MATLAB d(lambda) [nm]   chain rule [nm]   diff [%]
+   1.00-1.05     9        -0.0183               -0.0183       0.00
+   1.00-1.05    11        -0.0358               -0.0358       0.00
+   1.00-1.05    13        -0.0814               -0.0814       0.00
+   1.00-1.05    15        -0.5548               -0.5548       0.00
+   1.05-1.10     9        -0.0225               -0.0225       0.00
+   1.05-1.10    11        -0.0439               -0.0439       0.00
+   1.05-1.10    13        -0.0998               -0.0998       0.00
+   1.05-1.10    15        -0.6752               -0.6752       0.00
+   1.10-1.15     9        -0.0283               -0.0283       0.00
+   1.10-1.15    11        -0.0551               -0.0551       0.00
+   1.10-1.15    13        -0.1254               -0.1254       0.00
+   1.10-1.15    15        -0.8410               -0.8410       0.00
+   1.15-1.20     9        -0.0368               -0.0368       0.00
+   1.15-1.20    11        -0.0717               -0.0717       0.00
+   1.15-1.20    13        -0.1630               -0.1630       0.00
+   1.15-1.20    15        -1.0814               -1.0814       0.00
+   1.20-1.25     9        -0.0503               -0.0503       0.00
+   1.20-1.25    11        -0.0980               -0.0980       0.00
+   1.20-1.25    13        -0.2224               -0.2224       0.00
+   1.20-1.25    15        -1.4547               -1.4547       0.00
+   1.25-1.30     9        -0.0740               -0.0740       0.00
+   1.25-1.30    11        -0.1442               -0.1442       0.00
+   1.25-1.30    13        -0.3269               -0.3269       0.00
+   1.25-1.30    15        -2.0961               -2.0961       0.00
+   1.30-1.35     9        -0.1238               -0.1238       0.00
+   1.30-1.35    11        -0.2411               -0.2411       0.00
+   1.30-1.35    13        -0.5457               -0.5457       0.00
+   1.30-1.35    15        -3.3956               -3.3956       0.00
+   1.35-1.40     9        -0.2729               -0.2729       0.00
+   1.35-1.40    11        -0.5308               -0.5308       0.00
+   1.35-1.40    13        -1.1975               -1.1975       0.00
+   1.35-1.40    15        -7.0549               -7.0549       0.00
+   1.40-1.41     9        -0.1062               -0.1062       0.00
+   1.40-1.41    11        -0.2065               -0.2065       0.00
+   1.40-1.41    13        -0.4645               -0.4645       0.00
+   1.40-1.41    15        -2.6079               -2.6079       0.00
+   1.41-1.42     9        -0.1510               -0.1510       0.00
+   1.41-1.42    11        -0.2934               -0.2934       0.00
+   1.41-1.42    13        -0.6588               -0.6588       0.00
+   1.41-1.42    15        -3.5915               -3.5915       0.00
+   1.42-1.43     9        -0.2397               -0.2397       0.00
+   1.42-1.43    11        -0.4654               -0.4654       0.00
+   1.42-1.43    13        -1.0426               -1.0426       0.00
+   1.42-1.43    15        -5.4539               -5.4539       0.00
+   1.43-1.44     9        -0.4729               -0.4729       0.00
+   1.43-1.44    11        -0.9183               -0.9183       0.00
+   1.43-1.44    13        -2.0501               -2.0501       0.00
+   1.43-1.44    15       -10.0451              -10.0450       0.00
+SRI shift per interval (chain rule)      5.633e-04 %      (criterion < 3)  PASS
+
+Verification done in 18 s -> matlab_results/table4_verification.csv

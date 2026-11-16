@@ -1,17 +1,17 @@
 # LPG-CMT: transmission spectra of long-period fiber gratings and cladding-mode selection
 
-Open MATLAB / GNU Octave code (with independent Python checks) for the paper
+Open MATLAB code (with independent Python checks) for the paper
 
 > S. Sutharak and P. Anchuen, "Simulation of power transmission spectra in long period grating optical fiber and cladding-mode selection with a turning-point-independent figure of merit."
 
 The code computes the effective indices of the LP01 core mode and the LP0m cladding modes of a step-index fiber, the coupling coefficients, and the transmission spectrum of a uniform LPG with coupled-mode theory (scalar, weak guidance). It also computes the SRI response, the figure of merit FOM = |S|/FWHM, and the validation checks reported in the paper.
 
 ## Requirements
-- MATLAB R2021a or later, or GNU Octave 8.4 (no toolboxes required)
+- MATLAB R2021a or later (no toolboxes required)
 - Optional: Python 3 with numpy, scipy, pandas and matplotlib, for the independent checks and Figure 8
 
 ## How to run
-Open MATLAB or Octave in this folder, then run:
+Open MATLAB in this folder, then run:
 
 | Command | Produces | Paper |
 |---|---|---|
@@ -50,7 +50,6 @@ All parameters are set in `lpg_params.m` (Table 1 of the paper).
 
 ## Output
 - `results/` holds the CSV and text outputs used in the paper, plus `fig8_fom_map.png` (Figure 4 of the paper). The other figures are written to the same folder when `run_all` is run.
-- `reference_octave/` holds the same outputs from GNU Octave 8.4, for comparison with MATLAB.
 
 ## Model assumptions
 1. Scalar (LP) approximation. The (m−1)-th cladding mode LP0m corresponds to the odd-order mode ν = 2m − 3 of Erdogan's vector model (ν = 15 is LP09).

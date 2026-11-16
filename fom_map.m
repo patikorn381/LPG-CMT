@@ -20,7 +20,7 @@
 %   - evaluates the closed form, Eq. (7), and the first-order estimates
 %     S1 = -lambda*dncl/dn3/dn_g and FWHM1 = 2*x_h*lambda^2/(pi*L*|dn_g|).
 % Output: results/fom_map.csv (all designs). Figure 8 of the paper: python make_fig8.py
-% Run time: about 3-5 min (GNU Octave 8.4).
+% Run time: a few minutes in MATLAB.
 clear; P = lpg_params(); outdir = 'results'; if ~exist(outdir,'dir'), mkdir(outdir); end
 n3  = 1.33;                 % water (design point); other n3 via n3list below
 h   = 0.005;                % step of the central difference in n3
